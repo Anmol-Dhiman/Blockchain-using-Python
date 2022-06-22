@@ -7,19 +7,19 @@ ganache_url = "HTTP://127.0.0.1:7545"
 web3 = Web3(Web3.HTTPProvider(ganache_url))
 
 # accounts address in the ganache network 
-acount_1 = "0x1A065E1e4568aB20FDaD3f906f470Ce888D57Fc4"
-acount_2 = "0xC8c5A7c4a9D1B9Db8b279f2A597B1a2995Fe6c51"
+acount_1 = "0x891Ff07496C481598A0Ab93025b456568acc35BE"
+acount_2 = "0xD77a0630e510dd944c9D8a18B408e857Aab0e5e2"
 
 # the private key of those networks
-private_key_acount_1 = "a47da5e150c0bed5df18bc7b8c9b83d74ef8973957fd1e725e248e1f9f0548c1"
-private_key_acount_2 = "e28ba18645bddbd5c73c28a4616f9e4c5cbd60a7fcba6930b1149a0f22915713"
+private_key_acount_1 = "1097d1ee015638ad7f07a9b371418b5a8edc78b20ea04c2e7fa92f8cca52820e"
+private_key_acount_2 = "1f25dceff9a056e58715095c313004d225872e8dccd8b8c1c8c9e32316dc0903"
 
 nonce = web3.eth.getTransactionCount(acount_1)
 
 tx = {
     'nonce': nonce,
     'to': acount_2,
-    'value': web3.toWei(1, 'ether'),
+    'value': web3.toWei(7, 'ether'),
     'gas': 2000000,
     'gasPrice': web3.toWei('50', 'gwei'),
 }
