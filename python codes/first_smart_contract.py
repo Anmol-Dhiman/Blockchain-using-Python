@@ -3,6 +3,8 @@ from eth_utils import to_wei
 from web3 import Web3
 
 ganache_url = "HTTP://127.0.0.1:7545"
+
+# this http provider will help web3 to communicate with ganache
 web3 = Web3(Web3.HTTPProvider(ganache_url))
 
 # accounts address in the ganache network
@@ -25,7 +27,7 @@ tx = {
     'gas': 2000000,
     'gasPrice': web3.toWei('50', 'gwei'),
 }
-
+ 
 # signed transaction
 signed_tx = web3.eth.account.signTransaction(tx, private_key_acount_1)
 # sending the transaction
